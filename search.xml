@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Github + Hexo 搭建个人博客</title>
+    <url>/2022/05/19/Github_hexo_build_blog/</url>
+    <content><![CDATA[<h1 id="Github-Hexo-搭建个人博客"><a href="#Github-Hexo-搭建个人博客" class="headerlink" title="Github + Hexo 搭建个人博客"></a>Github + Hexo 搭建个人博客</h1><span id="more"></span>
+<h2 id="准备工作-飞机票前往HEXO官方文档"><a href="#准备工作-飞机票前往HEXO官方文档" class="headerlink" title="准备工作(飞机票前往HEXO官方文档)"></a>准备工作(飞机票前往<a href="https://hexo.io/zh-cn/docs/">HEXO官方文档</a>)</h2><ul>
+<li><p>注册一个github账号，建立一个仓库，名字 你的用户名.github.io (必须是你的用户名，否则出错。) </p>
+</li>
+<li><p>可以注册域名，我在阿里云注册的，欢迎访问我的个人<a href="archy.top">blog</a>。也可以使用xxx.github.io来访问。</p>
+</li>
+<li><p>以win10为例，安装或检查（<a href="https://nodejs.org/zh-cn/">node.js</a> <a href="https://git-scm.com/">git</a> ）软件是否安装。</p>
+<p>检查方式如下：在cmd下分别输入   </p>
+<p><code>node -v</code></p>
+<p><code>npm -v</code></p>
+<p> <code>git --version</code> </p>
+<p>成功后显示各自版本号（版本号会变，不要紧）。</p>
+</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/c78df1de8b8740f1847ea2a7a1169504.png#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>以<strong>管理员身份</strong>打开命令行cmd，安装hexo，输入命令</p>
+<p><code>npm install -g hexo-cli</code></p>
+<p>安装好hexo。检查是否安装成功可输入</p>
+<p><code>hexo -v</code></p>
+<p>有第一行提示就可以。</p>
+<p><img src="https://img-blog.csdnimg.cn/a17084c8384646f8a9f6d19cf517e46d.png#pic_center" alt="在这里插入图片描述"></p>
+<p>准备工作中已建立好GitHub，如果不会请百度，网上教程很多。此时你已经有xxx.github.io。</p>
+<h2 id="此时绑定你的github到ssh"><a href="#此时绑定你的github到ssh" class="headerlink" title="此时绑定你的github到ssh"></a>此时绑定你的github到ssh</h2><p>在你电脑的某个位置新建文件夹，例如blog，右键选择 Git Bash Here。</p>
+<p>输入</p>
+<p> <code>ssh</code> </p>
+<p>查看ssh是否安装完整。提示应当如下所示：</p>
+<p><img src="https://img-blog.csdnimg.cn/d3e59c8aa3b3473e97b82de5c716e8b4.png#pic_center" alt="在这里插入图片描述"></p>
+<p>输入</p>
+<p><code>ssh-keygen -t rsa -C &quot;你注册github时的邮件地址&quot;</code></p>
+<p>敲四次回车出现这样的东西：</p>
+<p><img src="https://img-blog.csdnimg.cn/c96f73f35a4f4eb290e4da638d18bdfa.png#pic_center" alt="在这里插入图片描述"></p>
+<p>同时，里面有一个这样的地址，前去查看：</p>
+<p><img src="https://img-blog.csdnimg.cn/2c6846f76acb4aa9b813b5e9d61b0342.png" alt="在这里插入图片描述"></p>
+<p>文本或者notepad打开id_rsa.pub文件，ctrl+a 全选，ctrl+c 复制，然后进入你的GitHub。点击<strong>右上角</strong>你的”头像选择“-&gt;”setting”-&gt;选择”SSH and GPG keys“ 选项。</p>
+<p><img src="https://img-blog.csdnimg.cn/e35387f1ea344a02aea16c0b774dd911.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAQXJjaHnnnqw=,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p>“new SSH key” 然后随便起个名字，把刚才复制的东西粘到里面。</p>
+<p><img src="https://img-blog.csdnimg.cn/ce2b6aee848f46df93036fbb86538f6e.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAQXJjaHnnnqw=,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p>保存以后，在回到刚才的bash里面，输入检测语句</p>
+<p> <code>ssh -T git@github.com</code></p>
+<p>显示：(未成功可能提示输入”yes”才能成功)</p>
+<p><img src="https://img-blog.csdnimg.cn/eec90502d18a457d9ce1ee6c900562e1.png" alt="在这里插入图片描述"></p>
+<p>成功连接。</p>
+<h2 id="生成网页并连接互联网"><a href="#生成网页并连接互联网" class="headerlink" title="生成网页并连接互联网"></a>生成网页并连接互联网</h2><p>此时，在blog这个文件夹内是空的。在里面右键选择 Git Bash Here。输入命令：</p>
+<p><code>hexo init</code></p>
+<p>此时，从github上下载hexo的一些文件（框架）。提示 INFO Start blogging with Hexo! （GitHub总是断，有条件的可以直接全局连接）</p>
+<p>然后可以更改主题，很多人推荐<a href="https://hexo.io/zh-cn/docs/themes">next</a>，我就不免俗了。如何修改可以自己百度。</p>
+<p>输入</p>
+<p> <code>hexo s</code></p>
+<p>本地可以打开网页。</p>
+<p><img src="https://img-blog.csdnimg.cn/990399beb3564b0983f0c4642f75e1ab.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAQXJjaHnnnqw=,size_18,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p>网页输入红色框内网址，就可以出现一个网页版本。此时本地完全部署成功。</p>
+<p>打开_config.yml 文件进行修改，修改deploy项</p>
+<p><img src="https://img-blog.csdnimg.cn/ad53de8207f546a6b1d9775a039092e5.png" alt="在这里插入图片描述"></p>
+<p>然后输入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/zhan/zhan.github.io.git</span><br><span class="line">  branch: master（此处有人说需要写成  main ， 我觉得应该是跟你github上对应吧。。。）</span><br></pre></td></tr></table></figure>
+
+<p>其中地址来自github上的code 选项，直接复制过来。</p>
+<p><img src="https://img-blog.csdnimg.cn/e166b4d33fdf42d19094c2bb37573889.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAQXJjaHnnnqw=,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p>在这个blog文件夹内，在里面右键选择 Git Bash Here</p>
+<p><code>hexo g</code></p>
+<p>生成网页文件。</p>
+<p><code>hexo d</code></p>
+<p>至此，就可以使用xxx.github.io打开网页了。</p>
+<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><p>如果你有自己的域名，可以将域名与你的”xxx.github.io“绑定。在你购买域名的网页比如阿里云的控制台里进行操作。</p>
+<p>然后有一步操作需要注意</p>
+<p>进入你的github的github.io，点击setting，左下有一个pages选项， 在custom domain 输入你的域名，点击save。source选项和_config.yml 文件deploy项对应。</p>
+<p><img src="https://img-blog.csdnimg.cn/b665328ef9044895aabbea2f240a59d3.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAQXJjaHnnnqw=,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
+<p>如图所示。</p>
+]]></content>
+      <categories>
+        <category>Technology Blog</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何写好一篇NeurIPS 2022？</title>
+    <url>/2022/05/19/How_to_ML_Paper_%20A_brief_Guide/</url>
+    <content><![CDATA[<h1 id="如何写好一篇NeurIPS-2022？"><a href="#如何写好一篇NeurIPS-2022？" class="headerlink" title="如何写好一篇NeurIPS 2022？"></a>如何写好一篇NeurIPS 2022？</h1><p>牛津大学副教授Jakob Foerster倾心讲解！</p>
+<span id="more"></span>
+
+<br>
+
+<div class="pdfobject-container" data-target="/pdf/How_to_ML.pdf" data-height="500px"></div>
+
+<p><br>0</p>
+]]></content>
+      <categories>
+        <category>Academic Sharing</category>
+      </categories>
+      <tags>
+        <tag>cognitive</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>知识图谱</title>
+    <url>/2022/05/20/knowledgegraphs/</url>
+    <content><![CDATA[<h1 id="知识图谱"><a href="#知识图谱" class="headerlink" title="知识图谱"></a>知识图谱</h1><p>Knowledge Graphs Methodology, Tools and Selected Use Cases!</p>
+<span id="more"></span>
+
+<br>
+
+<div class="pdfobject-container" data-target="/pdf/Fensel2020_Book_KnowledgeGraphs.pdf" data-height="500px"></div>
+
+<p><br>0</p>
+]]></content>
+      <categories>
+        <category>Academic Sharing</category>
+      </categories>
+      <tags>
+        <tag>cognitive</tag>
+        <tag>book</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>人工智能与医学</title>
+    <url>/2022/05/20/AIandmedicine/</url>
+    <content><![CDATA[<h1 id="AI-and-Medicine"><a href="#AI-and-Medicine" class="headerlink" title="AI and Medicine"></a>AI and Medicine</h1><p>这是一篇来自香港城市大学有关人工智能与医学领域的综述。</p>
+<span id="more"></span>
+
+<br>
+
+<div class="pdfobject-container" data-target="/pdf/AI_and_Medicine.pdf" data-height="500px"></div>
+
+<p><br>0</p>
+]]></content>
+      <categories>
+        <category>Academic Sharing</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>熵最优传输</title>
+    <url>/2022/05/23/Entropic_Optimal_Transport/</url>
+    <content><![CDATA[<h1 id="Entropic-Optimal-Transport"><a href="#Entropic-Optimal-Transport" class="headerlink" title="Entropic Optimal Transport"></a>Entropic Optimal Transport</h1><span id="more"></span>
+
+<h2 id="【熵最优传输导论】Introduction-to-Entropic-Optimal-Transport"><a href="#【熵最优传输导论】Introduction-to-Entropic-Optimal-Transport" class="headerlink" title="【熵最优传输导论】Introduction to Entropic Optimal Transport"></a>【熵最优传输导论】Introduction to Entropic Optimal Transport</h2><br>
+
+<div class="pdfobject-container" data-target="/pdf/EOT_lecture_notes.pdf" data-height="500px"></div>
+
+<br>
+
+<h2 id="机器学习中的熵最优输运-在分布回归、重心估计和概率匹配中的应用"><a href="#机器学习中的熵最优输运-在分布回归、重心估计和概率匹配中的应用" class="headerlink" title="机器学习中的熵最优输运:在分布回归、重心估计和概率匹配中的应用"></a>机器学习中的熵最优输运:在分布回归、重心估计和概率匹配中的应用</h2><p>Entropic Optimal Transport in Machine Learning: applications to Distributional Regression, Barycentric Estimation and Probability Matching</p>
+<br>
+
+<div class="pdfobject-container" data-target="/pdf/PhD_thesis__LUISEGIULIA.pdf" data-height="500px"></div>
+
+<br>
+
+]]></content>
+      <categories>
+        <category>Academic Sharing</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>概率论中的逻辑科学</title>
+    <url>/2022/05/23/logic_sci/</url>
+    <content><![CDATA[<h1 id="Probability-Theory-The-Logic-of-Science"><a href="#Probability-Theory-The-Logic-of-Science" class="headerlink" title="Probability Theory: The Logic of Science"></a>Probability Theory: The Logic of Science</h1><p>这是2002年的老书！</p>
+<span id="more"></span>
+
+<br>
+
+<div class="pdfobject-container" data-target="/pdf/AI_and_Medicine.pdf" data-height="500px"></div>
+
+<br>
+
+]]></content>
+      <categories>
+        <category>Academic Sharing</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+      </tags>
+  </entry>
+</search>
