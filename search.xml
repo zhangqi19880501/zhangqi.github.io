@@ -20,6 +20,32 @@
       </tags>
   </entry>
   <entry>
+    <title>熵最优传输</title>
+    <url>/2022/05/23/Entropic_Optimal_Transport/</url>
+    <content><![CDATA[<h1 id="Entropic-Optimal-Transport"><a href="#Entropic-Optimal-Transport" class="headerlink" title="Entropic Optimal Transport"></a>Entropic Optimal Transport</h1><span id="more"></span>
+
+<h2 id="【熵最优传输导论】Introduction-to-Entropic-Optimal-Transport"><a href="#【熵最优传输导论】Introduction-to-Entropic-Optimal-Transport" class="headerlink" title="【熵最优传输导论】Introduction to Entropic Optimal Transport"></a>【熵最优传输导论】Introduction to Entropic Optimal Transport</h2><br>
+
+<div class="pdfobject-container" data-target="/pdf/EOT_lecture_notes.pdf" data-height="500px"></div>
+
+<br>
+
+<h2 id="机器学习中的熵最优输运-在分布回归、重心估计和概率匹配中的应用"><a href="#机器学习中的熵最优输运-在分布回归、重心估计和概率匹配中的应用" class="headerlink" title="机器学习中的熵最优输运:在分布回归、重心估计和概率匹配中的应用"></a>机器学习中的熵最优输运:在分布回归、重心估计和概率匹配中的应用</h2><p>Entropic Optimal Transport in Machine Learning: applications to Distributional Regression, Barycentric Estimation and Probability Matching</p>
+<br>
+
+<div class="pdfobject-container" data-target="/pdf/PhD_thesis__LUISEGIULIA.pdf" data-height="500px"></div>
+
+<br>
+
+]]></content>
+      <categories>
+        <category>Academic Sharing</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Github + Hexo 搭建个人博客</title>
     <url>/2022/05/20/Github_hexo_build_blog/</url>
     <content><![CDATA[<h1 id="Github-Hexo-搭建个人博客"><a href="#Github-Hexo-搭建个人博客" class="headerlink" title="Github + Hexo 搭建个人博客"></a>Github + Hexo 搭建个人博客</h1><span id="more"></span>
@@ -100,32 +126,6 @@
       </tags>
   </entry>
   <entry>
-    <title>熵最优传输</title>
-    <url>/2022/05/23/Entropic_Optimal_Transport/</url>
-    <content><![CDATA[<h1 id="Entropic-Optimal-Transport"><a href="#Entropic-Optimal-Transport" class="headerlink" title="Entropic Optimal Transport"></a>Entropic Optimal Transport</h1><span id="more"></span>
-
-<h2 id="【熵最优传输导论】Introduction-to-Entropic-Optimal-Transport"><a href="#【熵最优传输导论】Introduction-to-Entropic-Optimal-Transport" class="headerlink" title="【熵最优传输导论】Introduction to Entropic Optimal Transport"></a>【熵最优传输导论】Introduction to Entropic Optimal Transport</h2><br>
-
-<div class="pdfobject-container" data-target="/pdf/EOT_lecture_notes.pdf" data-height="500px"></div>
-
-<br>
-
-<h2 id="机器学习中的熵最优输运-在分布回归、重心估计和概率匹配中的应用"><a href="#机器学习中的熵最优输运-在分布回归、重心估计和概率匹配中的应用" class="headerlink" title="机器学习中的熵最优输运:在分布回归、重心估计和概率匹配中的应用"></a>机器学习中的熵最优输运:在分布回归、重心估计和概率匹配中的应用</h2><p>Entropic Optimal Transport in Machine Learning: applications to Distributional Regression, Barycentric Estimation and Probability Matching</p>
-<br>
-
-<div class="pdfobject-container" data-target="/pdf/PhD_thesis__LUISEGIULIA.pdf" data-height="500px"></div>
-
-<br>
-
-]]></content>
-      <categories>
-        <category>Academic Sharing</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>如何写好一篇NeurIPS 2022？</title>
     <url>/2022/05/20/How_to_ML_Paper_%20A_brief_Guide/</url>
     <content><![CDATA[<h1 id="如何写好一篇NeurIPS-2022？"><a href="#如何写好一篇NeurIPS-2022？" class="headerlink" title="如何写好一篇NeurIPS 2022？"></a>如何写好一篇NeurIPS 2022？</h1><p>牛津大学副教授Jakob Foerster倾心讲解！</p>
@@ -142,6 +142,24 @@
       </categories>
       <tags>
         <tag>cognitive</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>有意识的人工智能</title>
+    <url>/2022/05/25/conscious_ai/</url>
+    <content><![CDATA[<h1 id="Conscious-AI"><a href="#Conscious-AI" class="headerlink" title="Conscious AI"></a>Conscious AI</h1><span id="more"></span>
+
+<br>
+
+<div class="pdfobject-container" data-target="/pdf/conscious_ai.pdf" data-height="500px"></div>
+
+<br>
+]]></content>
+      <categories>
+        <category>Academic Sharing</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
       </tags>
   </entry>
   <entry>
@@ -165,25 +183,6 @@
       </tags>
   </entry>
   <entry>
-    <title>精准医疗知识图谱</title>
-    <url>/2022/05/24/precision_medicine/</url>
-    <content><![CDATA[<h1 id="Building-a-knowledge-graph-to-enable-precision-medicine"><a href="#Building-a-knowledge-graph-to-enable-precision-medicine" class="headerlink" title="Building a knowledge graph to enable precision medicine."></a>Building a knowledge graph to enable precision medicine.</h1><p>【哈佛大学精准医疗知识图谱】</p>
-<span id="more"></span>
-
-<br>
-
-<div class="pdfobject-container" data-target="/pdf/knowledgegraph_precisionmedicine.pdf" data-height="500px"></div>
-
-<br>
-]]></content>
-      <categories>
-        <category>Academic Sharing</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>概率论中的逻辑科学</title>
     <url>/2022/05/23/logic_sci/</url>
     <content><![CDATA[<h1 id="Probability-Theory-The-Logic-of-Science"><a href="#Probability-Theory-The-Logic-of-Science" class="headerlink" title="Probability Theory: The Logic of Science"></a>Probability Theory: The Logic of Science</h1><p>这是2002年的老书！</p>
@@ -195,6 +194,25 @@
 
 <br>
 
+]]></content>
+      <categories>
+        <category>Academic Sharing</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>精准医疗知识图谱</title>
+    <url>/2022/05/24/precision_medicine/</url>
+    <content><![CDATA[<h1 id="Building-a-knowledge-graph-to-enable-precision-medicine"><a href="#Building-a-knowledge-graph-to-enable-precision-medicine" class="headerlink" title="Building a knowledge graph to enable precision medicine."></a>Building a knowledge graph to enable precision medicine.</h1><p>【哈佛大学精准医疗知识图谱】</p>
+<span id="more"></span>
+
+<br>
+
+<div class="pdfobject-container" data-target="/pdf/knowledgegraph_precisionmedicine.pdf" data-height="500px"></div>
+
+<br>
 ]]></content>
       <categories>
         <category>Academic Sharing</category>
