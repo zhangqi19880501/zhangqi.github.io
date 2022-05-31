@@ -172,8 +172,7 @@
 
 <div class="pdfobject-container" data-target="/pdf/Fensel2020_Book_KnowledgeGraphs.pdf" data-height="500px"></div>
 
-<p><br>0</p>
-]]></content>
+<br>]]></content>
       <categories>
         <category>Academic Sharing</category>
       </categories>
@@ -238,6 +237,25 @@
       </categories>
       <tags>
         <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>可解释人工智能</title>
+    <url>/2022/05/31/Interpretable_AI/</url>
+    <content><![CDATA[<h1 id="可解释人工智能"><a href="#可解释人工智能" class="headerlink" title="可解释人工智能"></a>可解释人工智能</h1><p>Interpretable AI</p>
+<span id="more"></span>
+
+<br>
+
+<div class="pdfobject-container" data-target="/pdf/Interpretable_AI.pdf" data-height="500px"></div>
+
+<br>]]></content>
+      <categories>
+        <category>Academic Sharing</category>
+      </categories>
+      <tags>
+        <tag>cognitive</tag>
+        <tag>book</tag>
       </tags>
   </entry>
 </search>
