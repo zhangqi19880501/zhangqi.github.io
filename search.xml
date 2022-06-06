@@ -130,12 +130,59 @@
     <url>/2022/05/20/How_to_ML_Paper_%20A_brief_Guide/</url>
     <content><![CDATA[<h1 id="如何写好一篇NeurIPS-2022？"><a href="#如何写好一篇NeurIPS-2022？" class="headerlink" title="如何写好一篇NeurIPS 2022？"></a>如何写好一篇NeurIPS 2022？</h1><p>牛津大学副教授Jakob Foerster倾心讲解！</p>
 <span id="more"></span>
-
-<br>
-
+<p>为了自己看着方便，我把这位教授的讲解用中文记录一下，寻找原文请直接下拉至pdf。</p>
+<h2 id="典型机器学习论文框架"><a href="#典型机器学习论文框架" class="headerlink" title="典型机器学习论文框架"></a>典型机器学习论文框架</h2><h3 id="摘要（Abstract）"><a href="#摘要（Abstract）" class="headerlink" title="摘要（Abstract）"></a>摘要（Abstract）</h3><ul>
+<li>1 论文主要的工作是什么？为什么要做这个工作？</li>
+<li>2 这个工作的难点是什么？</li>
+<li>3 我们如何解决这个问题的？（也就是我们的贡献是什么？）</li>
+<li>4 我们是怎么验证我们的方法的？理论证明还是实验验证？<h3 id="引言-（Introduction）"><a href="#引言-（Introduction）" class="headerlink" title="引言 （Introduction）"></a>引言 （Introduction）</h3>引言可以认为是一个加长版的摘要，需要对整篇论文的工作进行总结。所以涉及的问题与摘要基本一致。</li>
+<li>1 我们将要做的工作是什么？为什么要做这个工作？</li>
+<li>2 难点在哪里？</li>
+<li>3 我们是如何解决难点的？</li>
+<li>4 如何验证我们的结论？实验结果与理论分析。</li>
+<li>5 还可以加入未来的工作，第一页可以上一个比较好的结果图展示。</li>
+</ul>
+<h3 id="相关工作（Related-Work）"><a href="#相关工作（Related-Work）" class="headerlink" title="相关工作（Related Work）"></a>相关工作（Related Work）</h3><p>相关工作主要写解决相同问题的其他文献资料。我们要解决的问题，其他人是怎么解决的。<br>这部分内容的目标是比较和对比：</p>
+<ul>
+<li>对比方法与我们的工作在假设还是方法上有不同？</li>
+<li>如果对比文献中的方法可以通过实验进行比较，那么需要加入对比试验。</li>
+<li>如果不能比较，那么要说明为什么不能比较。</li>
+<li>仅仅描述另一篇文章在干什么是不够的，需要对比试验哦！</li>
+</ul>
+<h3 id="研究背景（Background）"><a href="#研究背景（Background）" class="headerlink" title="研究背景（Background）"></a>研究背景（Background）</h3><p>理解我们的工作需要哪些预备知识与概念，包括一个小的问题设置（problem setting）。如果有任何特殊的不常见的假设，需要在这里明确给出提示。</p>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>我们在做什么？我们为什么这么做，方法中的概念必须在研究背景中有所体现。</p>
+<h3 id="实验设置"><a href="#实验设置" class="headerlink" title="实验设置"></a>实验设置</h3><p>我们工作是如何测试验证的？其中需要包括实验设置细节。</p>
+<h3 id="试验结果和讨论"><a href="#试验结果和讨论" class="headerlink" title="试验结果和讨论"></a>试验结果和讨论</h3><p>首先展示出实验结果。与相关工作中提出的baseline进行比较。统计数据和置信区间的分析。超参数以及其他一些潜在的公平性申明。讨论方法的局限性。消融试验展示方法的有效性。</p>
+<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>我们成功的完成了方法。这篇论文很棒，整篇文章的简要回顾。未来要做的与之相关的令人感兴趣的研究工作。</p>
+<h2 id="其他建议"><a href="#其他建议" class="headerlink" title="其他建议"></a>其他建议</h2><ul>
+<li>写论文应当先把大纲写好，这样就算有改动总比写完论文再改要容易的多。</li>
+<li>大纲写好之后对于不确定的地方可以与其他同事或者指导老师进行讨论。</li>
+<li>接下来将大纲展开，但是尽量将大纲内容保留在开头（以latex的comment的形式）。这样一方面防止我们写偏题，另一方面其他任何人给予反馈时可以很快浏览你的整个整个框架。</li>
+</ul>
+<h2 id="常见的写作陷阱，可以打印出来画勾对照检查。"><a href="#常见的写作陷阱，可以打印出来画勾对照检查。" class="headerlink" title="常见的写作陷阱，可以打印出来画勾对照检查。"></a>常见的写作陷阱，可以打印出来画勾对照检查。</h2><ul>
+<li><input disabled="" type="checkbox"> 被动语态的过度使用，使得大家不知道是谁在做。</li>
+<li><input checked="" disabled="" type="checkbox"> 在贡献部分应当描述非常清晰，绝对不能混淆你的工作和他人的工作之间的界限。</li>
+<li><input disabled="" type="checkbox"> 时态要一致，即使有将来时，原则是能一致就一致。</li>
+<li><input disabled="" type="checkbox"> 描述尽量简洁，不废话，can be reformulated as …. -&gt; is (are) </li>
+<li><input disabled="" type="checkbox"> 初次写完一断话后，删除三分之一依旧可以表达清楚，那么你多余的三分之一就是冗余。</li>
+<li><input checked="" disabled="" type="checkbox"> latex中正确使用引号。这个请看，可以复制。&#96;&#96;paper’’</li>
+<li><input disabled="" type="checkbox"> \citet{} authors are part of the sentence. \citep{} other wise.</li>
+<li><input disabled="" type="checkbox"> 为了避免你的文章被无理由的攻击，你可以引用那些你的试验所没有验证的观点，同时需要避免过于宽泛的表述。</li>
+<li><input disabled="" type="checkbox"> 论文应当提前一周完成主稿，随后在进行一周完善。</li>
+<li><input disabled="" type="checkbox"> 使用缩写之前必须进行介绍。</li>
+<li><input disabled="" type="checkbox"> 什么内容要粗体，什么内容要斜体，取决于你。但是一定保持一致。</li>
+<li><input disabled="" type="checkbox"> 介绍缩写：<del>R</del>random <del>C</del>capitalisation (RC)</li>
+<li><input disabled="" type="checkbox"> 人工智能的拟人化尽量避免。比如说AI 具有knowledge。</li>
+<li><input disabled="" type="checkbox"> on the other hand 不能没有on the one hand。</li>
+<li><input disabled="" type="checkbox"> 一段话尽量不要单词重复使用。</li>
+<li><input disabled="" type="checkbox"> 尽可能使用简单的话。</li>
+<li><input disabled="" type="checkbox"> footnote 应当在标点符号之后。</li>
+<li><input disabled="" type="checkbox"> 除了逐字引用，永远不要复制粘贴，修改起来还不如自己重新写。</li>
+<li><input disabled="" type="checkbox"> 与所有作者重复的交流，（顶会写作）最后一周甚至是每天都要交流进度。<br></li>
+</ul>
 <div class="pdfobject-container" data-target="/pdf/How_to_ML.pdf" data-height="500px"></div>
 
-<p><br>0</p>
+<br>
 ]]></content>
       <categories>
         <category>Academic Sharing</category>
