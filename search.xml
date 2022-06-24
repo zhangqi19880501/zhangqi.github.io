@@ -305,4 +305,22 @@
         <tag>book</tag>
       </tags>
   </entry>
+  <entry>
+    <title>一篇VAE潜变量建模的综述（2022）</title>
+    <url>/2022/06/24/VAE_modeling/</url>
+    <content><![CDATA[<h1 id="利用变分自编码对潜变量建模的综述"><a href="#利用变分自编码对潜变量建模的综述" class="headerlink" title="利用变分自编码对潜变量建模的综述"></a>利用变分自编码对潜变量建模的综述</h1><p>原文来自<a href="https://arxiv.org/pdf/2206.09891.pdf">https://arxiv.org/pdf/2206.09891.pdf</a></p>
+<span id="more"></span>
+
+<br>
+
+<div class="pdfobject-container" data-target="/pdf/vae_survey.pdf" data-height="500px"></div>
+
+<br>]]></content>
+      <categories>
+        <category>Academic Sharing</category>
+      </categories>
+      <tags>
+        <tag>VAE</tag>
+      </tags>
+  </entry>
 </search>
